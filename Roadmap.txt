@@ -1,0 +1,180 @@
+♣ Chương 1: Cài đặt và làm quen với Android Studio
+_ Cài đặt JDK
+_ Cài đặt Android Studio
+_ Cài đặt máy ảo Genymotion
+_ Làm quen với Android Studio
+_ Tìm hiểu cấu trúc thư mục trong Android
+
+
+♣ Chương 2: Lập trình Java cơ bản cho Android
+_ Các kiểu dữ liệu và cách khai báo biến
+_ Câu lệnh điều kiện If else & Switch case
+_ Vòng lặp While & For
+_ Mảng và xử lí mảng
+_ Function
+
+♣ Chương 3: Layout trong Android
+_ Khái niệm về view, viewgroup
+_ Linear layout
+_ Relative layout
+_ Frame layout
+_ Table layout
+_ Constraint layout
+
+♣ Chương 4: Quy trình thiết kế ứng dụng
+_ Quy trình thiết kế một ứng dụng
+
+♣ Chương 5: Các Widgets cơ bản
+_ Button
+_ EditText
+_ Random số
+_ Switch
+_ Radio button
+_ Checkbox
+_ Imagebutton
+_ ImageView - Gán hình nền
+_ SeekBar
+_ ProgressBar
+
+♣ Chương 6: Hiển thị dữ liệu theo danh sách
+_ Listview cơ bản (cấu hình)
+_ Listview cơ bản (thêm, xóa, sửa)
+_ Giới thiệu lập trình hướng đối tượng
+_ Phân biệt public và private 
+_ Hàm khởi tạo - Constructor
+_ Getter và Setter
+_ Listview nâng cao với BaseAdapter
+_ ViewHodler trong Adapter
+_ Cấu hình Gridview
+_ Hiển thị hình ảnh với GridView
+
+♣ Chương 7: Tùy biến giao diện với Drawable
+_ Layer-List
+_ Selector
+_ Clip
+_ Shape  
+_ Custom ProgressBar
+_ Xây dựng ứng dụng đa ngôn ngữ
+
+♣ Chương 8: Menu và Dialog
+– Thiết lập và sử dụng Menu
+– Thiết lập và sử dụng Popup Menu
+– Làm việc với ContextMenu
+– Sử dụng Dialog
+– Custom giao diện cho Dialog
+– DatePickerDialog
+_ App Đếm ngày xa em
+– TimePickerDialog
+
+♣ Chương 9: Tạo ứng dụng đa màn hình
+– Intent Explicit
+_ Activity Lifecycle
+– Intent Explicit - Gửi và nhận chuỗi
+– Intent Explicit - Gửi và nhận số
+– Intent Explicit - Gửi và nhận mảng
+– Intent Explicit - Gửi và nhận Bundle
+– Intent Implicit - ACTION_VIEW
+– Intent Implicit - ACTION_SENDTO
+– Intent Implicit - ACTION_CALL
+– Intent for result
+_ Intent Camera
+_ Permissions at Run Time API 23
+– Xây dựng game chọn hình 
+_ Shared Preferences 
+_ Lưu điểm game với Shared Preferences
+
+♣ Chương 10: Tạo diễn hoạt Animation
+– Alpha Animation
+– Scale Animation
+– Rotate Animation
+– Translate Animation
+_ Hiệu ứng khi chuyển màn hình
+_ Hiệu ứng với ListView
+
+♣ Chương 11: Async Task và kỹ thuật đọc XML
+_ Quản lý tiến trình với Async Task
+_ Đọc nội dung từ website
+_ Load image from internet
+_ Xây dụng ứng dụng đọc tin tức sử dụng XML
+
+♣ Chương 12: Kỹ thuật đọc JSON
+_ Giới thiệu JSON
+_ Kỹ thuật đọc và phân tích JSON Object
+_ Kỹ thuật đọc và phân tích JSON Array
+_ Xây dựng ứng dụng đa ngôn ngữ mới JSON
+_ Đọc JSON Array dạng API
+
+♣ Chương 13: Volley
+_ Volley String Request
+_ Volley Json Object Request
+_ Volley Json Array Request
+
+♣ Chương 14: Kỹ thuật xử lí audio và video
+_ Play audio với Media Player
+_ Xây dựng ứng dụng play danh sách nhạc
+_ Play video với VideoView
+_ Play audio từ internet
+_ Play video từ internet
+
+♣ Chương 15: Dữ liệu local SQLite
+_ Giới thiệu SQLite
+_ Khai báo và cấu hình SQLite
+_ Insert, select dữ liệu trong SQLite
+_ Update, delete dữ liệu trong SQLite
+_ Xây dựng ứng dụng To Do List
+_ Lưu hình ảnh với SQLite
+
+♣ Chương 16: Webservice với PHP&Mysql
+_ Cài đặt Xampp và Sumlime Text
+_ Tạo file php kết nối với localhost
+_ Viết php trả dữ liệu với định dạng JSON
+_ Tạo database với Mysql
+_ Select database 
+_ Insert datababase từ ứng dụng
+_ Update database từ ứng dụng
+_ Delete database từ ứng dụng
+_ Upload hosting
+
+♣ Chương 17: Xây dựng ứng dụng Real Time với NodeJS & SocketIO
+_ Giới thiệu NodeJS & SocketIO
+_ Cài đặt NodeJS & Git
+_ Tạo server NodeJS
+_ Emit & On trong NodeJS
+_ Kết nối ứng dụng với server NodeJS
+_ Gửi dữ liệu từ app lên server
+_ Truyền dữ liệu từ server về app
+_ Xây dụng ứng dụng chat với NodeJS và Android
+
+♣ Chương 18: Kỹ thuật sử dụng Fragment
+_ Giới thiệu Fragment
+– Create Fragment
+– Add fragment XML
+– Add fragment Code
+– Fragment Communicator
+_ Fragment Bundle
+– Fragment Remove
+– Fragment Pop Back Stack
+– Sử dụng ListFragment
+– Sử dụng Dialog Fragment
+_ Fragment Interface
+– Bài tập xử lý giao diện với Fragment
+
+♣ Chương 19: Google API
+_ Giới thiệu API Google
+_ Play video từ Youtube sử dụng Youtube API
+_ Play danh sách video từ Youtube
+_ Nhúng google map vào ứng dụng
+_ Thêm Marker vào google map
+_ Camera trong google map
+
+♣ Chương 20: Nhúng quảng cáo Admob vào app
+_ Giới thiệu Admob
+_ Đăng ký tài khoản Admob
+_ Cấu hình Admob & tạo ID quảng cáo
+_ Nhúng quảng cáo vào ứng dụng
+
+♣ Chương 21: Submit ứng dụng lên Play Store
+_ Quy trình submit ứng dụng
+_ Hướng dẫn tạo keystore & build app release
+_ Submit ứng dụng
+https://khoapham.vn/khoa-hoc-lap-trinh-android.html
