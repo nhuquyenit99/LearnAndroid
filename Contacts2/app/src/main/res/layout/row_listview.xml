@@ -12,6 +12,7 @@
         android:layout_height="50dp"
         tools:srcCompat="@tools:sample/avatars[2]" />
     <TextView
+        android:id="@+id/tvName"
         android:layout_width="255dp"
         android:layout_height="50dp"
         android:text="Nguyễn Văn A"
