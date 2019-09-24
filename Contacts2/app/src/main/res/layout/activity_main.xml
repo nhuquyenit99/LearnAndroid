@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,6 +13,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btn_Search"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/search"
@@ -39,12 +41,11 @@
             android:layout_margin="20dp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_AddContact"
+            android:id="@+id/fab_AddContact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="30dp"
-            android:backgroundTint="#0F9184"
-            tools:srcCompat="@android:drawable/ic_menu_add" />
+            app:srcCompat="@drawable/plus" />
     </FrameLayout>
 </LinearLayout>

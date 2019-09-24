@@ -3,25 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="20dp"
-    android:background="@color/colorAccent"
     android:orientation="horizontal"
+    android:weightSum="14"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="59dp"
-        android:layout_height="50dp"
-        tools:srcCompat="@tools:sample/avatars[2]" />
     <TextView
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/avatar"
+        android:foreground="#00FFFFFF"/>
+
+    <TextView
+        android:layout_weight="2"
         android:id="@+id/tvName"
-        android:layout_width="255dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Nguyễn Văn A"
-        android:textAlignment="textStart"
-        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textSize="23dp"
         android:textStyle="bold" />
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            tools:srcCompat="@android:drawable/sym_action_call" />
+
+    <TextView
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/callicon"
+        android:foreground="#00FFFFFF" />
 </LinearLayout>
 

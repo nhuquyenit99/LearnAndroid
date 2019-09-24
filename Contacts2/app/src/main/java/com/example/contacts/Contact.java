@@ -10,10 +10,12 @@ public class Contact implements Serializable {
     Image avatar;
 
     public String getName() {
+
         return name;
     }
 
     public String getPhone() {
+
         return phone;
     }
 
@@ -22,10 +24,12 @@ public class Contact implements Serializable {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public void setPhone(String phone) {
+
         this.phone = phone;
     }
 

@@ -5,23 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Edit extends AppCompatActivity {
-    Button btnCancelEdit;
-    Button btnDoneEdit;
+    ImageButton mIbCancelEdit;
+    ImageButton mIbDoneEdit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
-        btnCancelEdit=findViewById(R.id.btn_CancelEdit);
-        btnCancelEdit.setOnClickListener(new View.OnClickListener() {
+        mIbCancelEdit=findViewById(R.id.btn_CancelEdit);
+        mIbCancelEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
-        btnDoneEdit=findViewById(R.id.btn_DoneEdit);
-        btnDoneEdit.setOnClickListener(new View.OnClickListener() {
+        mIbDoneEdit=findViewById(R.id.btn_DoneEdit);
+        mIbDoneEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();

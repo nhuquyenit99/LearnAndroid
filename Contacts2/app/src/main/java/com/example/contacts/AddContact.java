@@ -6,23 +6,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class AddContact extends AppCompatActivity {
-    Button btnCancelAdd;
-    Button btnDoneAdd;
+    ImageButton mIbCancelAdd;
+    ImageButton mIbDoneAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contact);
-        btnCancelAdd=findViewById(R.id.btn_CancelAdd);
-        btnCancelAdd.setOnClickListener(new View.OnClickListener() {
+        mIbCancelAdd=findViewById(R.id.btn_CancelAdd);
+        mIbCancelAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
-        btnDoneAdd=findViewById(R.id.btn_DoneAdd);
-        btnDoneAdd.setOnClickListener(new View.OnClickListener() {
+        mIbDoneAdd=findViewById(R.id.btn_DoneAdd);
+        mIbDoneAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
