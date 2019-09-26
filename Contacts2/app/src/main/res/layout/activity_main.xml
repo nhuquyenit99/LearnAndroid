@@ -17,10 +17,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:background="@drawable/search"
-            android:foreground="#00FFFFFF">
-
-        </ImageButton>
-
+            android:foreground="#00FFFFFF"/>
         <EditText
             android:id="@+id/edt_Search"
             android:layout_width="match_parent"

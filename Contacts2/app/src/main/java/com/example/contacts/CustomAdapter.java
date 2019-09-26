@@ -1,6 +1,8 @@
 package com.example.contacts;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +38,17 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-        Contact contact = arrContact.get(position);
+        final Contact contact = arrContact.get(position);
+        viewHolder.tvName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,Edit.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("contact",contact);
+                intent.putExtra("package",bundle);
+                context.startActivity(intent);
+            }
+        });
         //viewHolder.tvAvatar.setBackgroundColor(contact.getAvatar());
         //viewHolder.tvAvatar.setText(String.valueOf(position + 1));
         viewHolder.tvName.setText(contact.getName());

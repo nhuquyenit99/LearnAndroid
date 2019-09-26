@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        lvContact = (ListView) findViewById(R.id.lv_contact);
         ArrayList<Contact> arrContact = new ArrayList<>();
 
 
