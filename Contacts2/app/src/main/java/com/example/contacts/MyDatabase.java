@@ -41,9 +41,18 @@ public class MyDatabase<db> extends SQLiteOpenHelper {
         }
         return contacts;
     }
+
     public void deleteContact(Contact contact){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("Contact","id = ?", new String[]{String.valueOf(contact.getId())});
+        db.close();
+    }
+    public void updateContact(Contact contact){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("name",contact.getName());
+        values.put("phone",contact.getPhone());
+        db.update("Contact",values,"id = ?", new String[]{String.valueOf(contact.getId())});
         db.close();
     }
     @Override

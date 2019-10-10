@@ -38,7 +38,7 @@ public class AddContact extends AppCompatActivity {
                 newContact.setPhone(mEdtPhone.getText().toString());
                 newContact.setName(mEdtName.getText().toString());
                 Bundle bundle = new Bundle();
-                bundle.putSerializable("Contact",newContact);
+                bundle.putSerializable("contact",newContact);
 
                 Intent intent = new Intent();
                 intent.putExtra("bundle",bundle);

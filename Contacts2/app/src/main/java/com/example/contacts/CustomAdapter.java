@@ -17,13 +17,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter extends ArrayAdapter<Contact> {
-    private Context context;
     private int resource;
     private List<Contact> arrContact;
+    private MainActivity context;
 
     public CustomAdapter(Context context, int resource, ArrayList<Contact> arrContact) {
         super(context, resource, arrContact);
-        this.context = context;
+        this.context = (MainActivity) context;
         this.resource = resource;
         this.arrContact = arrContact;
     }
@@ -50,7 +50,7 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("contact",contact);
                 intent.putExtra("package",bundle);
-                context.startActivity(intent);
+                context.startActivityForResult(intent,123);
             }
         });
         viewHolder.imPhone.setOnClickListener(new View.OnClickListener() {

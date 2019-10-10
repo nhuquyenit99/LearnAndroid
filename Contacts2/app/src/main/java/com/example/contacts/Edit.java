@@ -2,6 +2,7 @@ package com.example.contacts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,23 +20,25 @@ public class Edit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
         mIbCancelEdit=findViewById(R.id.btn_CancelEdit);
+        mIbDoneEdit=findViewById(R.id.btn_DoneEdit);
+        edtName=findViewById(R.id.edt_Name);
+        edtPhone=findViewById(R.id.edt_Phone);
         mIbCancelEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent();
+                setResult(Activity.RESULT_CANCELED,intent);
                 finish();
             }
         });
-        mIbDoneEdit=findViewById(R.id.btn_DoneEdit);
+
         mIbDoneEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                finish();
             }
         });
-        edtName=findViewById(R.id.edt_Name);
-        edtPhone=findViewById(R.id.edt_Phone);
+
 
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("package");
