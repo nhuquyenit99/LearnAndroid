@@ -5,6 +5,7 @@ import android.media.Image;
 import java.io.Serializable;
 
 public class Contact implements Serializable {
+    int Id;
     String name;
     String phone;
     Image avatar;
@@ -34,6 +35,15 @@ public class Contact implements Serializable {
     }
 
     public void setAvatar(Image avatar) {
+
         this.avatar = avatar;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 }

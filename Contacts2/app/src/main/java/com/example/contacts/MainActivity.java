@@ -1,7 +1,9 @@
 package com.example.contacts;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.session.PlaybackState;
 import android.os.Bundle;
@@ -18,45 +20,46 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     FloatingActionButton mFabAddContact;
     ListView lvContact;
+    ArrayList<Contact> arrContact;
+    MyDatabase db;
+    CustomAdapter customAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mFabAddContact=findViewById(R.id.fab_AddContact);
+        db = new MyDatabase(this);
+        mFabAddContact = findViewById(R.id.fab_AddContact);
         mFabAddContact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AddContact.class);
-                startActivity(intent);
+                startActivityForResult(intent, 123);
             }
         });
-        lvContact=findViewById(R.id.lv_contact);
-        lvContact.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(MainActivity.this,Edit.class);
-                startActivity(intent);
-            }
-        });
-        ArrayList<Contact> arrContact = new ArrayList<>();
-
-
-        Contact contact1 = new Contact();
-        contact1.setName("Nguyen Van A");
-        Contact contact2 = new Contact();
-        contact2.setName("Nguyen Van B");
-        Contact contact3 = new Contact();
-        contact3.setName("Nguyen Van C");
-        Contact contact4 = new Contact();
-        contact4.setName("Nguyen Van D");
-
-        arrContact.add(contact1);
-        arrContact.add(contact2);
-        arrContact.add(contact3);
-        arrContact.add(contact4);
-
-        CustomAdapter customAdapter = new CustomAdapter(this,R.layout.row_listview,arrContact);
+        lvContact = findViewById(R.id.lv_contact);
+        arrContact = new ArrayList<Contact>();
+        arrContact = db.getAllContact();
+        customAdapter = new CustomAdapter(this, R.layout.row_listview, arrContact);
         lvContact.setAdapter(customAdapter);
+        customAdapter.notifyDataSetChanged();
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 123) {
+            if (resultCode == Activity.RESULT_OK) {
+                Bundle bundle = data.getBundleExtra("bundle");
+                Contact temp;
+                temp = (Contact) bundle.getSerializable("contact");
+                db.addContact(temp);
+                arrContact.add(temp);
+                customAdapter.notifyDataSetChanged();
+            }
+        }
+    }
+
 }
+
 

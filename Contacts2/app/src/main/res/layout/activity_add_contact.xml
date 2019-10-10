@@ -64,7 +64,7 @@
             android:textSize="25dp" />
 
         <EditText
-            android:id="@+id/edt_Name"
+            android:id="@+id/add_Name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Nhập tên" />
@@ -86,9 +86,10 @@
             android:textSize="25dp" />
 
         <EditText
-            android:id="@+id/edt_Phone"
+            android:id="@+id/add_Phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="Nhập sđt" />
+            android:hint="Nhập sđt"
+            android:inputType="phone"/>
     </LinearLayout>
 </LinearLayout>

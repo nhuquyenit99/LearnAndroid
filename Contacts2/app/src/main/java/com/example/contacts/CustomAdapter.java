@@ -2,12 +2,16 @@ package com.example.contacts;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +35,8 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
             convertView = LayoutInflater.from(context).inflate(R.layout.row_listview, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.tvName = convertView.findViewById(R.id.tvName);
-            //viewHolder.tvNumberPhone = convertView.findViewById(R.id.tvPhoneNumber);
-            //viewHolder.tvAvatar = convertView.findViewById(R.id.tvAvatar);
+            viewHolder.civAvatar = convertView.findViewById(R.id.civAvatar);
+            viewHolder.imPhone = convertView.findViewById(R.id.imPhone);
 
             convertView.setTag(viewHolder);
         } else {
@@ -49,15 +53,22 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
                 context.startActivity(intent);
             }
         });
-        //viewHolder.tvAvatar.setBackgroundColor(contact.getAvatar());
-        //viewHolder.tvAvatar.setText(String.valueOf(position + 1));
+        viewHolder.imPhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String phone = contact.phone;
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel",phone,null));
+                context.startActivity(intent);
+            }
+        });
         viewHolder.tvName.setText(contact.getName());
         //viewHolder.tvNumberPhone.setText(contact.getPhone());
         return convertView;
     }
 
     public class ViewHolder {
-        TextView tvName, tvNumberPhone, tvAvatar;
-
+        TextView tvName;
+        CircularImageView civAvatar;
+        ImageButton imPhone;
     }
 }

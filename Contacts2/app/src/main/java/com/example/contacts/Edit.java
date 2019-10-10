@@ -22,6 +22,7 @@ public class Edit extends AppCompatActivity {
         mIbCancelEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 finish();
             }
         });
@@ -29,11 +30,13 @@ public class Edit extends AppCompatActivity {
         mIbDoneEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 finish();
             }
         });
         edtName=findViewById(R.id.edt_Name);
         edtPhone=findViewById(R.id.edt_Phone);
+
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("package");
         Contact contact = (Contact)bundle.getSerializable("contact");
