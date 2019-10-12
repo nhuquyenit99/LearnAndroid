@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class AddContact extends AppCompatActivity {
     ImageButton mIbCancelAdd;
@@ -35,15 +36,22 @@ public class AddContact extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Contact newContact = new Contact();
-                newContact.setPhone(mEdtPhone.getText().toString());
-                newContact.setName(mEdtName.getText().toString());
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("contact",newContact);
+                if ((mEdtName.getText().toString().equals("")) || (mEdtPhone.getText().toString().equals(""))) {
+                    // hiển thị thông báo trên màn hình nếu người dùng chưa điền tên hoặc SĐT
+                    Toast toast = Toast.makeText(AddContact.this, "Không để trống tên hoặc số điện thoại", Toast.LENGTH_SHORT);
+                    toast.show();
+                    setResult(Activity.RESULT_CANCELED);
+                } else {
+                    newContact.setPhone(mEdtPhone.getText().toString());
+                    newContact.setName(mEdtName.getText().toString());
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("contact", newContact);
 
-                Intent intent = new Intent();
-                intent.putExtra("bundle",bundle);
-                setResult(Activity.RESULT_OK,intent);
-                finish();
+                    Intent intent = new Intent();
+                    intent.putExtra("bundle", bundle);
+                    setResult(Activity.RESULT_OK, intent);
+                    finish();
+                }
             }
         });
     }

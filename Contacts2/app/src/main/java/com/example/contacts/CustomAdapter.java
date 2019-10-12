@@ -21,7 +21,7 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
     private List<Contact> arrContact;
     private MainActivity context;
 
-    public CustomAdapter(Context context, int resource, ArrayList<Contact> arrContact) {
+    public CustomAdapter(MainActivity context, int resource, ArrayList<Contact> arrContact) {
         super(context, resource, arrContact);
         this.context = (MainActivity) context;
         this.resource = resource;
@@ -46,13 +46,14 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
         viewHolder.tvName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,Edit.class);
+                final Intent intent = new Intent(context,Edit.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("contact",contact);
                 intent.putExtra("package",bundle);
-                context.startActivityForResult(intent,123);
+                context.startActivityForResult(intent,004);
             }
         });
+
         viewHolder.imPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,9 +63,9 @@ public class CustomAdapter extends ArrayAdapter<Contact> {
             }
         });
         viewHolder.tvName.setText(contact.getName());
-        //viewHolder.tvNumberPhone.setText(contact.getPhone());
         return convertView;
     }
+
 
     public class ViewHolder {
         TextView tvName;

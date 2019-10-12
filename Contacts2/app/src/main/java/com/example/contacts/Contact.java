@@ -5,11 +5,23 @@ import android.media.Image;
 import java.io.Serializable;
 
 public class Contact implements Serializable {
-    int Id;
+    int id;
     String name;
     String phone;
     Image avatar;
+    public Contact(){
 
+    }
+    public Contact(int id, String name, String phone){
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+    }
+
+    public Contact(String name, String phone){
+        this.name = name;
+        this.phone = phone;
+    }
     public String getName() {
 
         return name;
@@ -29,8 +41,8 @@ public class Contact implements Serializable {
         this.name = name;
     }
 
-    public void setPhone(String phone) {
 
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -40,10 +52,10 @@ public class Contact implements Serializable {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 }
