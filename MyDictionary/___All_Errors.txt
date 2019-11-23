@@ -1,0 +1,5 @@
+CorrelationId: b3f7b495-0dd4-43df-adc5-97a4c07186fa
+UTC DateTime: 18/11/2019 3:57:15 CH
+
+The following file/folder has not been downloaded
+1. MyDictionary/app/build/generated/ap_generated_sources/debug
