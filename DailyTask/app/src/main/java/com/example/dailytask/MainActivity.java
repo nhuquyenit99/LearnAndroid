@@ -16,7 +16,15 @@ import android.view.View;
 import com.example.dailytask.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
-
+    // Tab titles
+    private String[] tabs = {"All Tasks", "To Do", "Done"};
+    private TabLayout tabLayout;
+    //Layout
+    public static int[] resourceIds = {
+            R.layout.fragment_main
+            , R.layout.fragment_item_list_done
+            , R.layout.fragment_item_list_todo
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

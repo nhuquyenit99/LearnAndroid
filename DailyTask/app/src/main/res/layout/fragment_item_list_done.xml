@@ -7,5 +7,4 @@
     android:clipToPadding="false"
     android:paddingTop="@dimen/list_item_spacing_half"
     android:paddingBottom="@dimen/list_item_spacing_half"
-    tools:context=".DoneFragment"
     tools:listitem="@layout/fragment_done" />
