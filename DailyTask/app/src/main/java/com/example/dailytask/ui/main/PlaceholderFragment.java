@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.dailytask.R;
 
-import static com.example.dailytask.MainActivity.resourceIds;
+//import static com.example.dailytask.MainActivity.resourceIds;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -48,16 +48,15 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-//        View root = inflater.inflate(R.layout.fragment_main, container, false);
-//        final TextView textView = root.findViewById(R.id.section_label);
-//        pageViewModel.getText().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-        int index = getArguments().getInt(ARG_SECTION_NUMBER);
-        View root = inflater.inflate(resourceIds[index], container, false);
+        View root = inflater.inflate(R.layout.fragment_main, container, false);
+        final TextView textView = root.findViewById(R.id.title);
+        pageViewModel.getText().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String s) {
+                textView.setText(s);
+            }
+        });
+
         return root;
     }
 }
